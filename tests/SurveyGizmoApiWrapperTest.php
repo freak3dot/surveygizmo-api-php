@@ -53,7 +53,7 @@ class SurveyGizmoApiWrapperTest extends \PHPUnit_Framework_TestCase
         $sg->setCredentials("test@case.com", "secret");
 
         $result = $sg->getCredentials();
-        $this->assertEquals("user:pass=test@case.com:secret", $result);
+        $this->assertEquals("api_token=test@case.com&api_token_secret=secret", $result);
     }
 
     /**
